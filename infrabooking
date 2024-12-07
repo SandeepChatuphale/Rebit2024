@@ -1,0 +1,20 @@
+Infra Booking App – 1.0 
+This App helps teams within your organization to book infra for official meetings. 
+
+Create following entity
+Room
+int id (PK) 
+int capacity 
+String type
+
+Application needs to provide following features. 
+1) To create Room 
+2) To update Room 
+3) To delete Room 
+4) View all Rooms
+5) View rooms by type
+6) count rooms by type
+
+Application MUST follow best practices
+
+Application MUST use JPA,Maven
