@@ -1,20 +1,35 @@
 Infra Booking App – 1.0 
-This App helps teams within your organization to book infra for official meetings. 
-
-Create following entity
-Room
+This App helps teams within your organization to book infra for 
+official meetings. 
+This is microservices based application. 
+Backend: 
+Create a microservice “room-service” 
+Room - - 
 int id (PK) 
 int capacity 
-String type
-
-Application needs to provide following features. 
+You need to develop following REST endpoints. Using Spring Boot 
 1) To create Room 
 2) To update Room 
 3) To delete Room 
-4) View all Rooms
-5) View rooms by type
-6) count rooms by type
-
-Application MUST follow best practices
-
-Application MUST use JPA,Maven
+4) View all Rooms 
+Create a microservice “booking-service” 
+Booking 
+int id (PK) 
+int roomId; 
+LocalDate bookingDate; 
+String status:  
+NOTE: - status can be “CONFIRM”,”COMPLETED”,”CANCELLED” 
+You need to develop following REST endpoints. Using Spring Boot 
+5) To view all bookings – it should fetch booking details along with room details 
+6) To view booking By Id - it should fetch booking details along with room details 
+7) Cancel booking By Id  
+8) Confirm booking 
+2 
+While developing these REST points following things MUST be followed 
+1) Resource based URI 
+2) Appropriate HTTP methods and status codes. 
+Data Needs to be stored in DB using Spring Data JPA. 
+Micro-services design: 
+Note that every microservice is a separate Spring Boot project.  
+Microservices communicate via open-feign. 
+Please create Spring Boot projects as per below guidelines- 
